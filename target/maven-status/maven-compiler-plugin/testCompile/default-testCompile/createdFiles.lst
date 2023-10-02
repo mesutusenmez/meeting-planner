@@ -1,0 +1,4 @@
+com/demo/meetingplanner/MeetingPlannerApplicationTests.class
+com/demo/meetingplanner/service/PlanServiceTest.class
+com/demo/meetingplanner/service/EventPlannerServiceTest.class
+com/demo/meetingplanner/service/EventServiceTest.class

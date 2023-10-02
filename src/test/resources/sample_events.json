@@ -1,0 +1,80 @@
+{
+  "events": [
+    {
+      "name": "Architecting Your Codebase",
+      "duration": 60
+    },
+    {
+      "name": "Overdoing it in Python",
+      "duration": 45
+    },
+    {
+      "name": "Flavors of Concurrency in Java",
+      "duration": 30
+    },
+    {
+      "name": "Ruby Errors from Mismatched Gem Versions",
+      "duration": 45
+    },
+    {
+      "name": "JUnit 5 - Shaping the Future of Testing on the JVM",
+      "duration": 45
+    },
+    {
+      "name": "Cloud Native Java",
+      "eventType": "LIGHTNING"
+    },
+    {
+      "name": "Communicating Over Distance",
+      "eventType": "LIGHTNING"
+    },
+    {
+      "name": "AWS Technical Essentials",
+      "duration": 60
+    },
+    {
+      "name": "Continuous Delivery",
+      "duration": 30
+    },
+    {
+      "name": "Monitoring Reactive Applications",
+      "duration": 30
+    },
+    {
+      "name": "Pair Programming vs Noise",
+      "duration": 45
+    },
+    {
+      "name": "Rails Magic",
+      "duration": 60
+    },
+    {
+      "name": "Microservices \"Just Right\" 60min",
+      "duration": 60
+    },
+    {
+      "name": "Clojure Ate Scala (on my project)",
+      "duration": 45
+    },
+    {
+      "name": "Perfect Scalability",
+      "duration": 30
+    },
+    {
+      "name": "Apache Spark",
+      "duration": 30
+    },
+    {
+      "name": "Async Testing on JVM",
+      "duration": 60
+    },
+    {
+      "name": "A World Without HackerNews",
+      "duration": 30
+    },
+    {
+      "name": "User Interface CSS in Apps",
+      "duration": 30
+    }
+  ]
+}

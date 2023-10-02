@@ -1,0 +1,5 @@
+server:
+  port: 8092
+
+schedule:
+  type: FIRST_COME
