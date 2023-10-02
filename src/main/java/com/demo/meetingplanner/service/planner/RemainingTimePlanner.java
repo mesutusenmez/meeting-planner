@@ -51,7 +51,7 @@ public class RemainingTimePlanner implements Planner {
         if (remainingMinutes > 0) {
             plannedEvents.forEach(p -> {
                 nonPlannedEvents.forEach(n -> {
-                    if (n.getDurationMinute() > p.getDurationMinute() && n.getDurationMinute() - p.getDurationMinute() < remainingMinutes) {
+                    if ((n.getDurationMinute() > p.getDurationMinute()) && (n.getDurationMinute() - p.getDurationMinute()) <= remainingMinutes) {
                         removedEvent.set(p);
                         addedEvent.set(n);
                     }

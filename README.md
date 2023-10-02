@@ -2,7 +2,14 @@
 
 * schedule.type parameter in application.yml must be FIRST_COME or REMAINING_TIME. This is scheduling algorithm you selected.
 
-* Visit http://localhost:8092/swagger-ui/index.html after running the app.
+* Run the application
 
-* You can use sample requests in test/resources folder.
+and then:
 
+* Visit http://localhost:8092/swagger-ui/index.html.
+
+* You can use sample_events in test/resources folder.
+
+OR
+
+* You can import demo.postman_collection.json in test/resources folder for Postman.

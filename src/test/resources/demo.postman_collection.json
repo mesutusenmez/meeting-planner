@@ -1,14 +1,14 @@
 {
 	"info": {
-		"_postman_id": "94d55a20-2fc6-4c33-af23-de96548f95a7",
+		"_postman_id": "d714d9b3-8ce9-4114-b152-28beaf673c10",
 		"name": "demo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "22739838",
-		"_collection_link": "https://galactic-desert-509480.postman.co/workspace/My-Workspace~def74aa4-43e2-486f-8ecd-0259c8c568b0/collection/22739838-94d55a20-2fc6-4c33-af23-de96548f95a7?action=share&source=collection_link&creator=22739838"
+		"_collection_link": "https://galactic-desert-509480.postman.co/workspace/My-Workspace~def74aa4-43e2-486f-8ecd-0259c8c568b0/collection/22739838-d714d9b3-8ce9-4114-b152-28beaf673c10?action=share&source=collection_link&creator=22739838"
 	},
 	"item": [
 		{
-			"name": "https://localhost:8092/api/event-plan/schedule",
+			"name": "http://localhost:8092/api/event-plan/schedule",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -22,8 +22,8 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:8092/api/event-plan/schedule",
-					"protocol": "https",
+					"raw": "http://localhost:8092/api/event-plan/schedule",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],

@@ -12,6 +12,7 @@ import com.demo.meetingplanner.service.planner.FirstComePlanner;
 import com.demo.meetingplanner.service.planner.Planner;
 import com.demo.meetingplanner.service.planner.RemainingTimePlanner;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -54,11 +55,13 @@ public class PlanService  {
         // set missing fields
         events = eventService.normalize(events);
 
+        log.info("{} scheduling algorithm is running.", scheduleProperties.getType());
+
         //schedule events
         planner.scheduleEvents(plan, events, LocalDate.now().atTime(9, 0), LocalDate.now().atTime(12, 0));
         planner.scheduleEvent(plan, lunch, LocalDate.now().atTime(12, 0));
         planner.scheduleEvents(plan, events, LocalDate.now().atTime(13, 0), LocalDate.now().atTime(17, 0));
-        planner.scheduleNetworkingEvent(plan, networking, LocalDate.now().atTime(17, 0));
+        planner.scheduleNetworkingEvent(plan, networking, LocalDate.now().atTime(16, 0), LocalDate.now().atTime(17, 0));
 
         //sort by start date
         plan.setEvents(plan.getEvents().stream().sorted(Comparator.comparing(Event::getStartDate, Comparator.naturalOrder())).toList());

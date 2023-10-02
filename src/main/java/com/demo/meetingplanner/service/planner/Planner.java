@@ -18,14 +18,19 @@ public interface Planner {
         plan.setPlannedDate(plan.getPlannedDate().plusMinutes(event.getDurationMinute()));
     }
 
-    default void scheduleNetworkingEvent(Plan plan, Event event, LocalDateTime endDate) {
+    default void scheduleNetworkingEvent(Plan plan, Event event, LocalDateTime startDate, LocalDateTime endDate) {
         int remainingMinutes =  (int) ChronoUnit.MINUTES.between(plan.getPlannedDate(), endDate);
 
-        if(EventType.NETWORKING == event.getType() && remainingMinutes > 0) {
-            event.setStartDate(plan.getPlannedDate());
-            event.setDurationMinute(remainingMinutes);
-            plan.getEvents().add(event);
-            plan.setPlannedDate(plan.getPlannedDate().plusMinutes(event.getDurationMinute()));
+        if(EventType.NETWORKING == event.getType()) {
+            if(remainingMinutes > 0 && remainingMinutes <= 60) {
+                event.setStartDate(plan.getPlannedDate());
+                event.setDurationMinute(remainingMinutes);
+                plan.getEvents().add(event);
+                plan.setPlannedDate(plan.getPlannedDate().plusMinutes(event.getDurationMinute()));
+            }else if(remainingMinutes > 60) {
+                event.setDurationMinute(60);
+                scheduleEvent(plan, event, startDate);
+            }
         }
     }
 
